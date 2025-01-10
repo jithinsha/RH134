@@ -1,0 +1,7 @@
+grep -v '^[#;]' \
+/etc/systemd/system/multi-user.target.wants/rsyslog.service
+
+cat /var/log/secure | grep -e 'pam_unix' \
+-e 'user root' -e 'Accepted publickey' | less
+
+
